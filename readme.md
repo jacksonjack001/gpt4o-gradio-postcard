@@ -3,7 +3,7 @@
 一款基于AI的智能插画生成工具，可根据文本描述自动生成景区介绍、城市介绍、知识卡片等图文内容。
 
 ## 线上demo
-线上demo地址-https://gpt4o.deepnoting.xyz
+线上demo地址(需要翻墙)-https://gpt4o.deepnoting.xyz
 
 ## 1、明信片生成小工具
 
