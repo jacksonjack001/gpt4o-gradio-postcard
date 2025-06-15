@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>支付测试</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            max-width: 500px;
+            margin: 0 auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input[type="text"], input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        .payment-methods {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        .payment-method {
+            flex: 1;
+            min-width: 100px;
+            text-align: center;
+        }
+        .payment-method input {
+            display: none;
+        }
+        .payment-method label {
+            display: block;
+            padding: 10px;
+            background: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .payment-method input:checked + label {
+            background: #e3f2fd;
+            border-color: #2196F3;
+        }
+        button {
+            display: block;
+            width: 100%;
+            padding: 12px;
+            background: #2196F3;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        button:hover {
+            background: #0b7dda;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>支付测试</h1>
+        <form action="/pay" method="post">
+            <div class="form-group">
+                <label for="money">支付金额 (元)</label>
+                <input type="number" id="money" name="money" step="0.01" min="0.01" value="0.01" required>
+            </div>
+            
+            <div class="form-group">
+                <label>选择支付方式</label>
+                <div class="payment-methods">
+                    <div class="payment-method">
+                        <input type="radio" id="alipay" name="pay_type" value="alipay" checked>
+                        <label for="alipay">支付宝</label>
+                    </div>
+                    <div class="payment-method">
+                        <input type="radio" id="wxpay" name="pay_type" value="wxpay">
+                        <label for="wxpay">微信支付</label>
+                    </div>
+                    <div class="payment-method">
+                        <input type="radio" id="qqpay" name="pay_type" value="qqpay">
+                        <label for="qqpay">QQ钱包</label>
+                    </div>
+                </div>
+            </div>
+            
+            <button type="submit">立即支付</button>
+        </form>
+    </div>
+</body>
+</html>

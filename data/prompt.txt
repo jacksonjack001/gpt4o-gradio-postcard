@@ -1,0 +1,22 @@
+产品名称：深度记事插画生成
+产品功能：根据提示词或者输入的slot filling信息，自动生成景区介绍、城市介绍、知识卡片图文并茂的图片效果，用于更快速的一图胜千言等等；
+
+使用步骤：分为四步
+1、方式1：通过阈值模版，选择合适选项合成提示词
+1）城市(杭州)、景点(西湖景区) +提示词模版 
+请生成一张图片，模拟在一张略带纹理的纸张（比如米黄色或浅棕色）上手写的关于景区 {city}-{scene} 的讲解笔记。图片应呈现旅行日志/拼贴画风格，包含以下元素：
+
+用手写字体（比如蓝色或棕色墨水）书写景区名称、地理位置、最佳游览季节、以及一两句吸引人的标语或简介。 包含几个主要看点或特色的介绍，使用编号列表或项目符号（例如：列举2-3个具体看点，如“奇特的岩石形态”，“古老的传说”，“独特的植物”等），并配有简短的手写说明。 用红色笔迹或其他亮色圈出或用箭头指向特别推荐的地点或活动（例如 列举1-2个推荐项）。 穿插一些与景区特色相关的简单涂鸦式小图画（例如：根据景区特色想1-2个代表性图画，如山峰轮廓、特色动植物、标志性建筑等]=）。
+
+点缀几张关于该景区的、看起来像是贴上去的小幅照片（可以是风景照、细节照，风格可以略显复古或像宝丽来照片）。 整体感觉要像一份由热情导游或资深游客精心制作的、生动有趣的个人导览手记。
+
+
+
+2）主题(AI强化学习) +提示词模版2
+Create concise, visually structured notes on the topic ''. Notes must fit clearly within a layout (horizontal/vertical), featuring: - Moderate Font Size: Comfortable readability. - Clear Structure: - Main points highlighted with "background colors" or "wavy underlines~". - Regular notes in standard ink. - Emphasis notes in a different ink color. - Illustrations: - Include relevant sketches or hand-drawn style illustrations. - Allow fountain pen-style doodles or annotations directly on illustrations. - Annotations: - Simulate notes, corrections, and additional quirky doodles resembling spontaneous annotations, using marker pen style. - Incorporate collage-style photo extracts relevant to the topic, annotated or doodled upon. - Language Text Accuracy Constraint (Strict): - When generating text in '', abide by recognized dictionaries and standard grammar rules. - For languages like 中文 (Chinese) or others with complex scripts: - Ensure each character or symbol is correct, standard, and used appropriately. - Double-check stroke order, avoid non-existent variants, and verify usage before finalizing the notes. User Settings: - Topic: {topic}- Orientation: Vertical - Language: {lang} - Color Scheme: highlight style. - Illustration Style: Detailed hand-drawn
+ 
+3）通用参数(下拉框)：语言[中英文]、尺寸[3*2,1*1,2*3]、图片数目[1/2/4]、其他属性 (文本输入，默认：真实风格，字体置灰)
+
+2、 方式2：通过自定义提示词，得到自定义的提示词
+3、输出：得到最终的提示词
+4、调用openAI最新的gpt-image-1模型进行生成，放在下方
